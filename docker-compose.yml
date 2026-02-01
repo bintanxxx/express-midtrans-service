@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  payment-service:
+    # Build image dari folder saat ini (.)
+    build: .
+
+    # Nama container biar cantik dilihat di Docker Desktop
+    container_name: universal-payment-core
+
+    # Restart otomatis kalau error/crash
+    restart: always
+
+    # Mapping Port [Port Laptop : Port Container]
+    # Kamu akses localhost:3000 -> diteruskan ke port 3000 di dalam container
+    ports:
+      - "3000:3000"
+
+    # Load Environment Variables dari file .env
+    # Ini kuncinya biar file .env di laptopmu terbaca oleh container
+    env_file:
+      - .env
+
+    # (Opsional) Healthcheck: Ngecek apakah service beneran idup
+    # healthcheck:
+    #   test: ["CMD", "curl", "-f", "http://localhost:3000/"]
+    #   interval: 30s
+    #   timeout: 10s
+    #   retries: 3
