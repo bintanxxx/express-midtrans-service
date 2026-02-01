@@ -35,6 +35,6 @@ Cara termudah dan tercepat adalah menggunakan Docker.
 ### 1. Clone Repository
 
 ```bash
-git clone [https://github.com/USERNAME_KAMU/universal-payment-gateway.git](https://github.com/USERNAME_KAMU/universal-payment-gateway.git)
+git clone [https://github.com/bintanxxx/express-midtrans-service.git](https://github.com/bintanxxx/express-midtrans-service.git)
 cd universal-payment-gateway
 ```
